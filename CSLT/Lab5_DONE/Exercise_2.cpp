@@ -27,4 +27,5 @@ int main()
     }
     max_length_word.append(s, maxbegin, max_lenght);
     cout << max_length_word;
+    return 0;
 }
