@@ -78,5 +78,6 @@ int main()
     createLinkedList(a);
     createLinkedList(b);
     deleteLinkedList(a);
+    deleteLinkedList(b);
     return 0;
 }
