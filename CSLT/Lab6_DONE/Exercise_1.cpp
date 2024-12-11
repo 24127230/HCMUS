@@ -88,7 +88,6 @@ void updateByID(student s[], int &n)
         if (isSameID(s[i].studentID, ID))
         {
             t = 1;
-            cin.ignore();
             cout << "Name                       : ";
             getline(cin, s[i].fullName);
             cout << "Date of birth              : ";
