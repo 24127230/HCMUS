@@ -1,0 +1,5 @@
+4
+Alice Johnson, 85, 90, 95
+Bob Smith, 75, 80, 70
+Charlie Brown, 95, 85, 90
+Taylor Swift, 95, 85, 90
