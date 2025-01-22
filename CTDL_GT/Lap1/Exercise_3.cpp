@@ -69,4 +69,5 @@ int main()
          << s << '\n';
     cout << "Word count: " << countword(s) << '\n';
     cout << "Longest word: " << longestword(s);
+    return 0;
 }

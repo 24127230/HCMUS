@@ -145,4 +145,5 @@ int main()
     for (int i = 0; i < rowstc; i++)
         delete[] tc[i];
     delete[] tc;
+    return 0;
 }

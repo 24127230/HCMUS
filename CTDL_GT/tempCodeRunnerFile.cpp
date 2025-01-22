@@ -1,2 +1,0 @@
-
-    cout << end << ' ' << count <<  '\n';
