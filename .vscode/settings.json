@@ -13,6 +13,7 @@
         "type_traits": "cpp",
         "utility": "cpp",
         "limits": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "chrono": "cpp"
     }
 }
