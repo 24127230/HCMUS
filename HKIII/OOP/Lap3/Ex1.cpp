@@ -5,7 +5,7 @@ class Ngay
 {
 private:
     int d, m, y;
-
+hi
 public:
     Ngay();
     Ngay(int input_day);
