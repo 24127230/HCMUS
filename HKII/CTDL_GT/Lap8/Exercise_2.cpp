@@ -28,16 +28,30 @@ void Bellman_Ford(vector<vector<int>> &a, int source) {
             if(a[i][j]) edgeSet.push_back({i, j, a[i][j]});
         }
     }
+<<<<<<< HEAD
     
     vector<int> d(n, INT_MAX);
     d[source] = 0;
     
+=======
+    for (const Edge &e : edgeSet)
+    {
+        cout << e.u << " " << e.v << " " << e.w << '\n';
+    }
+    
+    vector<int> d(n, INT_MAX);
+    d[source] = 0;
+>>>>>>> 13ae612820f3526fcd772dc069469470d564ef07
     vector<int> parent(n); 
     for (int step = 0; step < n - 1; step++)
     {
         
         for (const Edge &e : edgeSet) {
+<<<<<<< HEAD
             if (d[e.u] != INT_MAX && d[e.v] > d[e.u] + e.w) {
+=======
+            if (d[e.v] > d[e.u] + e.w){
+>>>>>>> 13ae612820f3526fcd772dc069469470d564ef07
                 d[e.v] = d[e.u] + e.w;
                 parent[e.v] = e.u;
             }
@@ -45,7 +59,11 @@ void Bellman_Ford(vector<vector<int>> &a, int source) {
     }
     // run 1 more time
     for (const Edge &e : edgeSet) {
+<<<<<<< HEAD
         if (d[e.u] != INT_MAX && d[e.v] > d[e.u] + e.w) {
+=======
+        if (d[e.v] > d[e.u] + e.w){
+>>>>>>> 13ae612820f3526fcd772dc069469470d564ef07
             cout << "Graph have negative cicle.";
             return;
         }
@@ -55,12 +73,17 @@ void Bellman_Ford(vector<vector<int>> &a, int source) {
         if (i != source) 
         {
             cout << "The shortest path from "<< source << " to " << i << ": ";
+<<<<<<< HEAD
             if (d[i] == INT_MAX) {
                 cout << "No path exists.\n";
             } else {
                 printPath_utov(source, i, parent);
                 cout << ".\n";
             }
+=======
+            printPath_utov(source, i, parent);
+            cout << ".\n";
+>>>>>>> 13ae612820f3526fcd772dc069469470d564ef07
         }
     }
 

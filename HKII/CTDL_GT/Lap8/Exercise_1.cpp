@@ -3,9 +3,13 @@
 #include <vector>
 #include <stack>
 #include <climits> 
+<<<<<<< HEAD
 #include <queue>
 using namespace std;
 struct Edge {int vertex, weight;};
+=======
+using namespace std;
+>>>>>>> 13ae612820f3526fcd772dc069469470d564ef07
 void printPath_utov(int u, int v, vector<int> &parent) {
     stack<int> s;
     while(v != u) {
@@ -19,6 +23,7 @@ void printPath_utov(int u, int v, vector<int> &parent) {
         if (!s.empty()) cout << " -> ";
     }
 }
+<<<<<<< HEAD
 void Dijkstra(vector<vector<Edge>> &a, int source) {
     int n = a.size();
     vector<int> d(n, INT_MAX);
@@ -44,6 +49,31 @@ void Dijkstra(vector<vector<Edge>> &a, int source) {
         }
     }
     
+=======
+void Dijkstra(vector<vector<int>> &a, int source) {
+    int n = a.size();
+    vector<int> d(n, INT_MAX);
+    d[source] = 0;
+    int step = 0;
+    vector<bool> vertexset(n, 0);
+    int u; // vertex
+    vector<int> parent(n); 
+    while (step++ < n) {
+        int min = INT_MAX;
+        for (int i = 0; i < n; i++)
+            if (min > d[i] && !vertexset[i]) {
+                min = d[i];
+                u = i;
+            }
+        vertexset[u] = 1;
+        for (int v = 0; v < n; v++) {
+            if (a[u][v] != 0 && !vertexset[v] && d[v] > d[u] + a[u][v]) {
+                d[v] = d[u] + a[u][v];
+                parent[v] = u;
+            }
+        }
+    }
+>>>>>>> 13ae612820f3526fcd772dc069469470d564ef07
     for (int i = 0; i < n; i++)
     {
         if (i != source) 
@@ -63,16 +93,27 @@ int main() {
 
     int n;
     fin >> n;
+<<<<<<< HEAD
     vector<vector<Edge>> a(n);
+=======
+    vector<vector<int>> a(n, vector<int>(n, 0));
+>>>>>>> 13ae612820f3526fcd772dc069469470d564ef07
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < n; j++)
         {
+<<<<<<< HEAD
             int w;
             fin >> w;
             if (w > 0)
                 a[i].push_back({j, w});
         }
+=======
+            fin >> a[i][j];
+            cout << a[i][j] << " ";
+        }
+        cout << "\n";
+>>>>>>> 13ae612820f3526fcd772dc069469470d564ef07
     }
     fin.close();
 
