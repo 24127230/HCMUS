@@ -5,7 +5,7 @@ class Ngay
 {
 private:
     int d, m, y;
-hi
+
 public:
     Ngay();
     Ngay(int input_day);
@@ -14,18 +14,17 @@ public:
 };
 Ngay::Ngay() : d(1), m(1), y(1) {}
 // Ngay::Ngay(int input_day);
-Ngay::Ngay(int input_day, int input_month, int input_year) {
-    int day;
-    if (input_day < 0) input_day = -input_day;
-    if (input_month < 0) input_month = -input_month;
-    if (input_year < 0) input_year = -input_year;
+Ngay::Ngay(int input_day, int input_month, int input_year)
+{
+    if (input_day < 0)
+        input_day = -input_day;
+    if (input_month < 0)
+        input_month = -input_month;
+    if (input_year < 0)
+        input_year = -input_year;
 
-    input_year += input_month/12;
-    input_month = input_month%12;
-
-    if ((input_year%4==0 && input_year%100!=0) || input_year%400==0) {  //is lead y
-        
-    }
+    input_year += input_month / 12;
+    input_month = input_month % 12;
 }
 ostream &operator<<(ostream &os, const Ngay &ng)
 {
@@ -54,4 +53,4 @@ int main()
     // cout << n9 << endl << n10 << endl;
     return 0;
 }
-499+19+4+356*1999
+499 + 19 + 4 + 356 * 1999
