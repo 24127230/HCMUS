@@ -46,11 +46,9 @@ int Ngay::dmy_to_d(int day, int month, int year)
 }
 void Ngay::d_to_dmy(int day)
 {
-    cout << "d:" << day << " to dmy:";
     y = day / 365;
     while (int(y / 4) - int(y / 100) + int(y / 400) + y * 365 > day)
         y--;
-
     day -= int(y / 4) - int(y / 100) + int(y / 400) + y * 365;
     m = 1;
     for (; m <= 12; m++)
@@ -63,7 +61,6 @@ void Ngay::d_to_dmy(int day)
     }
     y = y + 1;
     d = day + 1;
-    cout << d << ' ' << m << ' ' << y <<endl;
 }
 Ngay::Ngay() : d(1), m(1), y(1) {}
 Ngay::Ngay(int input_day)
@@ -151,7 +148,7 @@ int main()
     {
         n10 = n2 - 1000 + n6; // 14/9/2025 (739507)
     }
-    cout << n1 << endl << n2 << endl << n3 << endl << n4 << endl;
+    cout << n1 << endl << n2 << endl << n3 << endl << n4 << endl << endl;
     cout << n5 << endl << n6 << endl << n7 << endl << n8 << endl;
     cout << n9 << endl << n10 << endl;
     return 0;
