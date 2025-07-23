@@ -8,7 +8,7 @@ private:
     string number;
 public:
     SoNguyenLon();
-    SoNguyenLon(int so);
+    SoNguyenLon(unsigned long long int so);
     SoNguyenLon(string so);
     SoNguyenLon(int so_bi_lap, int so_luong);
     static SoNguyenLon SNLMax();
@@ -19,7 +19,7 @@ public:
 
 //write func here
 SoNguyenLon::SoNguyenLon(): number("0") {}
-SoNguyenLon::SoNguyenLon(int so) {
+SoNguyenLon::SoNguyenLon(unsigned long long int so) {
     if(so < 0) so = -so;
     number = to_string(so); 
 }
@@ -27,13 +27,13 @@ SoNguyenLon::SoNguyenLon(string so) {
     so.erase(0, so.find_first_not_of('0'));
 
     if (so.empty()) so = "0";
-    if (so.length() > 20 || so.find_first_not_of("0123456789") != string::npos)
+    if (so.length() > 100000000000000 || so.find_first_not_of("0123456789") != string::npos)
         number = "0";
     else
         number = so;
 }
 SoNguyenLon::SoNguyenLon(int so_bi_lap, int so_luong) {
-    if(so_bi_lap < 0 || so_bi_lap > 9 || so_luong < 0 || so_luong > 20) 
+    if(so_bi_lap < 0 || so_bi_lap > 9 || so_luong < 0 || so_luong > 10000000000) 
         number = "0";
     else {
         string tmp(so_luong, so_bi_lap + '0');
@@ -88,12 +88,13 @@ SoNguyenLon SoNguyenLon::SNLMax() {
 int main()
 {
     SoNguyenLon snl1;
-    SoNguyenLon snl2(1234567);
-    SoNguyenLon snl3(3, 14);
-    SoNguyenLon snl4(9, 20);
-    SoNguyenLon snl5 = snl3.Sub(snl2);
-    SoNguyenLon snl6 = SoNguyenLon(45678910).Sub(snl2);
-    SoNguyenLon snl7 = (snl4.Sub(snl3)).Add(SoNguyenLon(123456789));
+SoNguyenLon snl2(44667733);
+SoNguyenLon snl3(5, 9);
+SoNguyenLon snl4(7, 30);
+SoNguyenLon snl5 = snl3.Sub(snl2);
+SoNguyenLon snl6 = SoNguyenLon(1098765432).Sub(snl2);
+SoNguyenLon snl7 = (snl4.Sub(snl3)).Add(SoNguyenLon(123456789));
+// SoNguyenLon snl8 = snl2 * snl3;
     snl1.Xuat(); cout << endl;
     snl2.Xuat(); cout << endl;
     snl3.Xuat(); cout << endl;

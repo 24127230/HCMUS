@@ -30,8 +30,8 @@ public:
 
 Node::Node(): pNext(NULL), info(0) {}
 Node::Node(int _val): pNext(NULL), info(_val) {}
-Node::Node(Node *_next, int _val): pNext(_next), info(_val) {}
-Node::Node(Node *_next): pNext(_next), info(0) {}
+// Node::Node(Node *_next, int _val): pNext(_next), info(_val) {}
+// Node::Node(Node *_next): pNext(_next), info(0) {}
 
 LinkedList::LinkedList(): pHead(NULL), pTail(NULL), curN(0) {}
 LinkedList::~LinkedList(void) {
