@@ -1,0 +1,3 @@
+C:/Users/kinhq/Desktop/HCMUS/HKIII/OOP/Lab8/Ex2/VehicleManagement/build/CMakeFiles/VehicleManager.dir
+C:/Users/kinhq/Desktop/HCMUS/HKIII/OOP/Lab8/Ex2/VehicleManagement/build/CMakeFiles/edit_cache.dir
+C:/Users/kinhq/Desktop/HCMUS/HKIII/OOP/Lab8/Ex2/VehicleManagement/build/CMakeFiles/rebuild_cache.dir

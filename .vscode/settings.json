@@ -26,6 +26,26 @@
         "sstream": "cpp",
         "streambuf": "cpp",
         "new": "cpp",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "cctype": "cpp",
+        "clocale": "cpp",
+        "cmath": "cpp",
+        "cstdarg": "cpp",
+        "cstddef": "cpp",
+        "cstdint": "cpp",
+        "cstdio": "cpp",
+        "cstdlib": "cpp",
+        "cstring": "cpp",
+        "ctime": "cpp",
+        "cwchar": "cpp",
+        "cwctype": "cpp",
+        "exception": "cpp",
+        "memory": "cpp",
+        "numeric": "cpp",
+        "random": "cpp",
+        "ratio": "cpp",
+        "initializer_list": "cpp",
+        "stdexcept": "cpp",
+        "typeinfo": "cpp"
     }
 }
